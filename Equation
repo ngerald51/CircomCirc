@@ -1,0 +1,34 @@
+pragma circom 2.1.4;
+
+include "circomlib/poseidon.circom";
+template Equal3() {
+  signal input a;
+  signal input b;
+  signal input c;
+
+  signal output d;
+
+  signal e;
+
+  e <== 2*a;
+  signal f;
+  f <== b*c;
+
+  signal g;
+
+  g <== e + f;
+
+  d <== g;
+
+
+}
+component main = Equal3();
+
+
+/* INPUT = {
+    "a": "5",
+    "b": "7",
+    "c": "1"
+} */
+
+//eq = 2a + bc
